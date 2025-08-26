@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+body { background: #000; }
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px;
+}
+.main .image-container h1 {
+  color: #00bcd4;
+  font-size: 40px;
+  letter-spacing: 0.4rem;
+  text-align: center;
+}
+.main .image-container p {
+  color: #8db3b6;
+  text-align: center;
+}
+.main .input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(560px, 80vw);
+  height: 56px;
+  border-radius: 20px;
+  background: rgba(202,253,255,0.4);
+  backdrop-filter: blur(6px);
+  gap: 12px;
+  padding: 0 12px;
+}
+.main .input .talk {
+  background: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #aed0d0;
+}
+.main .input .content { color: #aed0d0; font-size: 16px; }
+.jarvis-ring { position: relative; width: 220px; height: 220px; }
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(0,188,212,0.25);
+  animation: spin 8s linear infinite;
+}
+.r1 { box-shadow: 0 0 24px #00bcd4 inset, 0 0 40px #00bcd4; }
+.r2 { transform: scale(0.75); animation-duration: 6s; opacity: 0.85; }
+.r3 { transform: scale(0.5);  animation-duration: 4s; opacity: 0.7; }
+@keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
